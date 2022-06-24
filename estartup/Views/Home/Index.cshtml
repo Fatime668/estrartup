@@ -1,0 +1,136 @@
+﻿@model HomeVM
+<main>
+    <section id="welcome">
+        <div class="container">
+            <div class="title text-center">
+                <div class="txt">
+                    <h2>Welcome to eStartup</h2>
+                    <p>
+                        Elegant Bootstrap Template for Startups, Apps & more...
+                    </p>
+                    <div class="img">
+                        <img src="https://bootstrapmade.com/demo/templates/eStartup/assets/img/hero-img.png" alt="">
+                    </div>
+                </div>
+                <div class="btn">
+                    <a href="#">GET STARTED</a>
+                </div>
+                <div class="text-center link">
+                    <ul class="list-unstyled d-flex justify-content-center">
+                        <li><a href="#">APP STORE</a></li>
+                        <li class="ms-3"><a href="#">GOOGLE PLAY</a></li>
+                        <li class="ms-3"><a href="#">WINDOWS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="post">
+        <div class="container">
+            <div class="title text-center p-5">
+                <h2>Latest Posts</h2>
+                <p>Integer Cursus Bibendum Augue Ac Cursus .</p>
+            </div>
+            <div class="row m-5">
+                @foreach (var item in Model.Posts)
+                {
+                <div class="col-lg-4">
+                    <div class="postcart">
+                        <div class="img">
+                            <img src="@item.Image" alt="">
+                        </div>
+                        <div class="txt">
+                            <h4> <a href="#">@item.Title</a></h4>
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li><span>@item.Date</span></li>
+                                <li><a href="#">read more</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                }
+
+            </div>
+        </div>
+    </section>
+    <section id="email">
+        <div class="container">
+            <div class="form">
+                <form action="" class="text-center">
+                    <input type="email" placeholder="Email Adress">
+                    <button>Subscribe</button>
+                </form>
+                <div class="icons">
+                    <ul class="list-unstyled d-flex justify-content-center">
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li class="ms-3"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li class="ms-3"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li class="ms-3"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="title text-center">
+                <h2>Contact</h2>
+                <p>Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium Doloremque</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <div class="infos">
+                        <div class="icon d-flex">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <ul class="list-unstyled">
+                                <li><span>A108 Adam Street</span></li>
+                                <li><span>@Model.Setting.Location</span></li>
+                            </ul>
+                        </div>
+                        <div class="icon d-flex">
+                            <i class="fa-solid fa-envelope"></i>
+                            <ul class="list-unstyled">
+                                <li><span>A108 Adam Street</span></li>
+                                <li><span>@Model.Setting.Email</span></li>
+                            </ul>
+                        </div>
+                        <div class="icon d-flex">
+                            <i class="fa-solid fa-mobile-button"></i>
+                            <ul class="list-unstyled">
+                                <li><span>A108 Adam Street</span></li>
+                                <li><span>@Model.Setting.Phone</span></li>
+                            </ul>
+                        </div>
+                        <div class="icons">
+                            <ul class="d-flex list-unstyled">
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li class="ms-3"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li class="ms-3"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li class="ms-3"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="message">
+                        <div>
+                            <input class="form-control" type="text" placeholder="Your name">
+                        </div>
+                        <div>
+                            <input class="form-control" type="email" placeholder="Your email">
+                        </div>
+                        <div>
+                            <input class="form-control" type="text" placeholder="Subject">
+                        </div>
+                        <div>
+                            <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+                        </div>
+                        <div class="text-center my-3">
+                            <button class="btn btn-lg btn-success">Send Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
